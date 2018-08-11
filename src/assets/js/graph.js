@@ -1,6 +1,6 @@
 // ハードコードでグラフを表示
 
-function make_canvas(canvas,data,label){
+function make_canvas(canvas,data,label,rgba){
     var chart = new Chart(canvas, {
         type: 'line',
         data: {
@@ -9,10 +9,10 @@ function make_canvas(canvas,data,label){
                 label: '# of Votes',
                 data: data,
                 backgroundColor: [
-                    'rgba(255, 99, 132, 0.2)'
+                    rgba
                 ],
                 borderColor: [
-                    'rgba(255,99,132,1)',
+                    rgba
                 ],
                 borderWidth: 1,
                 borderDashOffset:3,
@@ -36,10 +36,12 @@ function make_canvas(canvas,data,label){
 
 }
 
-var canvas1 = document.getElementById("stage1").getContext('2d');
-var canvas2 = document.getElementById("stage2").getContext('2d');
-var canvas3 = document.getElementById("stage3").getContext('2d');
+var canvas1 = document.getElementById("stage1");
+var canvas2 = document.getElementById("stage2");
+var canvas3 = document.getElementById("stage3");
 
-make_canvas(canvas1,[1, 2, 3, 1, 2, 3, 2, 2, 1, 3],"仕事の調子はどう？");
-make_canvas(canvas2,[1, 2, 3, 1, 2, 3, 2, 2, 1, 3],"上司との関係性は？");
-make_canvas(canvas3,[1, 2, 3, 1, 2, 3, 2, 2, 1, 3],"データ入力に作業はどう");
+
+
+make_canvas(canvas1,JSON.parse(graph1.dataset.graph),"仕事の調子はどう？",'#B171F57a');
+make_canvas(canvas2,[2, 2, 0, 1, 2, 1, 0, 1, 1, 1],"上司との関係性は？",'#F5BF767a');
+make_canvas(canvas3,[0, 2, 1, 1, 2, 0, 2, 2, 1, 0],"データ入力に作業はどう",'#93FAC37a');

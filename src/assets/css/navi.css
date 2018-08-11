@@ -49,6 +49,10 @@ body {
     height: 200px;
 }
 
+canvas{
+    margin-bottom: 50px;
+}
+
 
 
 @media screen and (max-height: 450px) {
