@@ -2,82 +2,34 @@
 <html>
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<style>
-body {
-    font-family: "Lato", sans-serif;
-}
 
-.sidenav {
-    height: 100%;
-    width: 0;
-    position: fixed;
-    z-index: 1;
-    top: 0;
-    left: 0;
-    background-color: #111;
-    overflow-x: hidden;
-    transition: 0.5s;
-    padding-top: 60px;
-}
 
-.sidenav a {
-    padding: 8px 8px 8px 32px;
-    text-decoration: none;
-    font-size: 25px;
-    color: #818181;
-    display: block;
-    transition: 0.3s;
-}
-
-.sidenav a:hover {
-    color: #f1f1f1;
-}
-
-.sidenav .closebtn {
-    position: absolute;
-    top: 0;
-    right: 25px;
-    font-size: 36px;
-    margin-left: 50px;
-}
-
-#main {
-    transition: margin-left .5s;
-    padding: 16px;
-}
-
-@media screen and (max-height: 450px) {
-  .sidenav {padding-top: 15px;}
-  .sidenav a {font-size: 18px;}
-}
-</style>
+<link rel="stylesheet" href="../static/navi.css"></style>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.1.4/Chart.min.js"></script>  
 </head>
 <body>
 
 <div id="mySidenav" class="sidenav">
   <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-  <a href="{{ url_for('regist') }}">メニュー</a>
-  <a href="#">hogeさん</a>
-  <a href="#">hogehogeさん</a>
-  <a href="#">fooさん</a>
-  <a href="#">piyoさん</a>
+  <a href="#">設定</a>
+  <a href="#">河本竣頌さん</a>
+  <a href="#">曽根田悠介さん</a>
+  <a href="#">玉井あゆみさん</a>
+  <a href="#">鈴木佑亮さん</a>
+
 </div>
 
 <div id="main">
   <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776;</span>
+
+  <div class="container">
+      <canvas id="stage1"></canvas>
+      <canvas id="stage2"></canvas>
+      <canvas id="stage3"></canvas>
+    </div>
 </div>
 
-<script>
-  function openNav(){
-    document.getElementById("mySidenav").style.width = "250px";
-    document.getElementById("main").style.marginLeft = "250px";
-}
-
-function closeNav() {
-    document.getElementById("mySidenav").style.width = "0";
-    document.getElementById("main").style.marginLeft= "0";
-}
-</script>
-     
+<script src="../static/navi.js"></script>   
+<script src="../static/graph.js"></script>
 </body>
 </html> 
