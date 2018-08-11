@@ -69,20 +69,44 @@
     width: 100px;
 }
 
+
+/* [IMO] fontawesome が安全な気がしますが、どうでしょうか。 */
+
 .good {
-    background-image: url("../image/good.png");
+    /* background-image: url("../image/good.png"); */
+    background-image: url("../image/smile-solid.svg");
     background-size: contain;
 }
 
 
 .normal {
-    background-image: url("../image/normal.png");
+    /* background-image: url("../image/normal.png"); */
+    background-image: url("../image/meh-solid.svg");
     background-size: contain;
 }
 
 .angly {
-    background-image: url("../image/angly.png");
+    /* background-image: url("../image/angly.png"); */
+    background-image: url("../image/tired-solid.svg");
     background-size: contain;
+}
+
+/* override fas */
+
+.fas {
+    font-size: 6em;
+}
+
+.fa-smile {
+    color: #33ba33;
+}
+
+.fa-meh {
+    color: #F9CD16;
+}
+
+.fa-tired{
+    color: #FF5555;
 }
 
 .speech_area .text {
