@@ -49,7 +49,7 @@
 }
 
 .avator_area {
-    height: 270px;
+    height: 290px;
     text-align: center;
 }
 
@@ -61,7 +61,7 @@
 .choice_area {
     display: flex;
     height: 100px;
-    margin-top: 20px;
+    margin-top: 10px;
     justify-content: space-around;
 }
 
