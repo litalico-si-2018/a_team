@@ -13,7 +13,10 @@ def index():
 
 @app.route("/admin")
 def admin():
-    return render_template("admin.html")
+
+    # データベースから取得した情報をここから渡す．配列もしくはjson
+    data1 = [2,2,2,1,2,0,2,1,1,2]
+    return render_template("admin.html",data1=data1)
 
 @app.route("/regist")
 def regist():
