@@ -1,19 +1,21 @@
 create table users(
-    id int primary key,  
+    id int,  
     name varchar(50),
-    level int
+    primary key(id)
 );
 
 create table questions(
-    id int primary key,
+    id int,
     name varchar(40),
+    primary key(id)
 );
 
 create table answers(
     user_id int,
     question_id int,
-    condition int,
-    created_at timestamp not null default current_timestamp,
-    FOREIGN KEY (`user_id`) references users(`id`),
-    FOREIGN KEY (`question_id`) references questions(`id`)
+    `condition` int,
+    created_at datetime default current_timestamp,
+    FOREIGN KEY (user_id) references users(id),
+    FOREIGN KEY (question_id) references questions(id)
 );
+
