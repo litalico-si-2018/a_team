@@ -7,8 +7,12 @@ app = Flask(__name__, static_folder='assets')
 
 APP_ROOT = os.path.dirname(os.path.abspath(__file__))
 
-@app.route("/admin")
+@app.route("/")
 def index():
+    return render_template("index.html")
+
+@app.route("/admin")
+def admin():
     return render_template("admin.html")
 
 @app.route("/regist")
