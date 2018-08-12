@@ -49,7 +49,7 @@
 }
 
 .avator_area {
-    height: 290px;
+    height: 270px;
     text-align: center;
 }
 
@@ -61,91 +61,29 @@
 .choice_area {
     display: flex;
     height: 100px;
-    margin-top: 10px;
+    margin-top: 20px;
     justify-content: space-around;
-    position: relative;
 }
 
 .choice_area .item {
     width: 100px;
 }
 
-
-/* [IMO] fontawesome が安全な気がしますが、どうでしょうか。 */
-
 .good {
-    background-image: url("../image/good.png"); 
-    /*background-image: url("../image/smile-solid.svg");*/
+    background-image: url("./assets/image/good.png");
     background-size: contain;
 }
 
 
 .normal {
-    background-image: url("../image/normal.png"); 
-    /*background-image: url("../image/meh-solid.svg");*/
+    background-image: url("./assets/image/normal.png");
     background-size: contain;
 }
 
 .angly {
-     background-image: url("../image/angly.png"); 
-    /*background-image: url("../image/tired-solid.svg");*/
+    background-image: url("./assets/image/angly.png");
     background-size: contain;
 }
-
-/* override fa, fas */
-
-.fa {
-    font-size: 4em;
-}
-
-.fas {
-    font-size: 6em;
-}
-
-.fa-smile {
-    color: #33ba33;
-    cursor: pointer;
-}
-
-.fa-meh {
-    color: #F9CD16;
-    cursor: pointer;
-}
-
-.fa-tired{
-    color: #f55;
-    cursor: pointer;
-}
-
-@keyframes img-move-up {
-  to {
-    transform: translateY(-600px);
-  }
-}
-
-@keyframes img-move-down {
-    to {
-      transform: translateY(600px);
-    }
-  }
-  
-.fa-heart, .fa-heart:before {
-    color: #f55;
-    z-index: 1;
-    position: absolute;
-    animation: img-move-up 6s infinite;
-    left: 10px;
-}
-
-.fa-tint, .fa-tint:before {
-    color: #5af;
-    z-index: 1;
-    position: absolute;
-    animation: img-move-down 6s infinite;
-    right: 10px;
-    top: -300px;
-}
-
 .speech_area .text {
     position: absolute;
     display: inline-block;
@@ -166,3 +104,5 @@
     height: 160px;
     width: 290px;
 }
+
+
