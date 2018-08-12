@@ -24,7 +24,7 @@ class Api{
 
 var now_q_id = 0
 var story_id = 0
-const ans_set = ["good", "normal", "angly"]
+const ans_set = ["good", "normal", "angry"]
 function setup(){
     for (ans of ans_set){
         $(`.${ans}`).on('click', function(e){
@@ -44,6 +44,19 @@ function toggleFadeoutIcons(ans_id){
         const cl = items[i].classList
         if (i == ans_id){
             cl.toggle("rotaionFadeoutAnim");
+            if (ans_id == 0){
+                $("#answerHeart").addClass("fa fa-heart");
+                $(".fa-heart:before").css("display", "inline-block");
+                $('#answerHeart').delay(5000).queue(function() {
+                    $(this).removeClass('fa-heart').dequeue();
+                });
+            } else if (ans_id == 2) {
+                $("#answerTint").addClass("fa fa-tint");
+                $(".fa-tint:before").css("display", "inline-block");
+                $('#answerTint').delay(5000).queue(function() {
+                  $(this).removeClass('fa-tint').dequeue();
+                }); 
+            }
         } else {
             cl.toggle("fadeoutAnim");
         }
@@ -124,4 +137,17 @@ function typing(text, selector, speed=50){
     });
 }
 
+$("#avatorNormal").on("click", function(){
+    $("#avatorPleased").remove();
+    $(this).css("display", "block");
 
+    $(this).parent(".avator_area").append('<img class="avator" id="avatorPleased" src="./assets/image/lying.svg" />')
+    // $(this).remove();
+    $(this).css("display", "none");
+
+    $("#avatorPleased").delay(1000).queue(function() {
+        // $(this).append('<img class="avator" id="avatorNormal" src="./assets/image/waiting.svg" />')        
+        $(this).remove();
+        $("#avatorNormal").css("display", "block");
+    }); 
+})

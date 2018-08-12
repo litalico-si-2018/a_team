@@ -57,6 +57,14 @@
     height: 100%;
 }
 
+#avatorNormal{
+    cursor: pointer;
+    margin: 0 auto;
+}
+
+#avatorPleased{
+    width: 100%;
+}
 
 .choice_area {
     display: flex;
@@ -71,24 +79,19 @@
 }
 
 
-/* [IMO] fontawesome が安全な気がしますが、どうでしょうか。 */
-
 .good {
-    background-image: url("../image/good.png"); 
-    /*background-image: url("../image/smile-solid.svg");*/
+    background-image: url("../image/smile.png"); 
     background-size: contain;
 }
 
 
 .normal {
-    background-image: url("../image/normal.png"); 
-    /*background-image: url("../image/meh-solid.svg");*/
+    background-image: url("../image/meh-face-emoticon.png"); 
     background-size: contain;
 }
 
-.angly {
-     background-image: url("../image/angly.png"); 
-    /*background-image: url("../image/tired-solid.svg");*/
+.angry {
+    background-image: url("../image/frown.png"); 
     background-size: contain;
 }
 
