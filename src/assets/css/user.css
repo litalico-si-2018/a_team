@@ -20,6 +20,22 @@
     width: 100vw;
 }
 
+a {
+    text-decoration: none;
+    color: white;
+}
+
+.wankos {
+    width:120px;
+    height:40px;
+    position: absolute;
+    text-align: center;
+    padding:6px;
+    background-color: var(--thema-color);
+    color: white;
+    font-weight:bold;
+}
+
 .level {
     width:70px;
     height:40px;
