@@ -63,6 +63,7 @@
     height: 100px;
     margin-top: 10px;
     justify-content: space-around;
+    position: relative;
 }
 
 .choice_area .item {
@@ -91,7 +92,11 @@
     background-size: contain;
 }
 
-/* override fas */
+/* override fa, fas */
+
+.fa {
+    font-size: 4em;
+}
 
 .fas {
     font-size: 6em;
@@ -99,14 +104,47 @@
 
 .fa-smile {
     color: #33ba33;
+    cursor: pointer;
 }
 
 .fa-meh {
     color: #F9CD16;
+    cursor: pointer;
 }
 
 .fa-tired{
-    color: #FF5555;
+    color: #f55;
+    cursor: pointer;
+}
+
+.fa-heart, .fa-heart:before {
+    color: #f55;
+    z-index: 1;
+    position: absolute;
+    animation: img-move-up 6s infinite;
+    left: 10px;
+}
+
+@keyframes img-move-up {
+  to {
+    transform: translateY(-1000px);
+  }
+}
+
+@keyframes img-move-down {
+    to {
+      transform: translateY(1000px);
+    }
+  }
+  
+.fa-tint, .fa-tint:before {
+    color: #5af;
+    display: none;
+    z-index: 1;
+    position: absolute;
+    animation: img-move-down 6s infinite;
+    right: 10px;
+    top: 20px;
 }
 
 .speech_area .text {
