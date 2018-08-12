@@ -1,16 +1,44 @@
 STORY_DATA = [
     {
-        level: 11,
-        next_comment: "今日はお仕事どうだったわん？"
+        next_comment: "おはようわん！"
     },
     {
-        level: 11,
-        next_comment: "それは大変だわん！"
+        next_comment: "今日は調子どうー？" // good
     },
     {
-        level: 11,
-        next_comment: "上司はどんな感じだわん？"
-    }
+        next_comment: "それは良かったわん！"
+    },
+    {
+        next_comment: "実習Aはどうだったわん？" // bad
+    },
+    {
+        next_comment: "あれれ、そうなのかわん..."
+    },
+    {
+        next_comment: "お仕事がうまく行かなかったわん？" // good
+    },
+    {
+        next_comment: "そかそか！山田くんは最近優秀って聞いてるわん!"
+    },
+    {
+        next_comment: "それだったら..人間関係がきついわん？" // bad
+    },
+    {
+        next_comment: "上司とかかわん？" // bad
+    },
+    {
+        next_comment: "まあ気に病むなって！人生色々あるわん！"
+    },
+    {
+        next_comment: "ちなみにからだの調子はどうわん？" // 
+    },
+    {
+        next_comment: "いいわん〜、ぼくも最近調子いいんだわん！"
+    },
+    {
+        next_comment: "うまいわん！ありがとわん！",
+        action_svg: './images/waiting.svg',
+    },
 ]
 
 class Api{
@@ -24,6 +52,8 @@ class Api{
 
 var now_q_id = 0
 var story_id = 0
+var now_speech = ""
+
 const ans_set = ["good", "normal", "angly"]
 function setup(){
     for (ans of ans_set){
@@ -35,6 +65,25 @@ function setup(){
     init_answer();
 }
 setup();
+
+// 犬をいじる
+$('.avator').on('click', function(e){
+    console.log(e);
+    playAvator();
+});
+
+function playAvator(completion){
+    const $avator = $('.avator')
+    $avator.attr('src', './images/eating.svg');
+    const pre_speech = now_speech
+    speech('あ〜それ、気持ちいいわん〜');
+    setTimeout(function() {
+        speech(pre_speech);
+        $avator.attr('src', './images/waiting.svg');
+        if(completion){completion();}
+    }, 2000);
+}
+
 
 function toggleFadeoutIcons(ans_id){
     // 呼び出す毎に回転してフェードアウト。
@@ -105,6 +154,7 @@ function speech(text, completion){
     // わんこが話す
     text_sl = '.text_area .text'
     $(text_sl).text("");
+    now_speech = text;
     $.when(typing(text, text_sl)).done(function() {
         if(completion){completion();}
     });
@@ -123,5 +173,4 @@ function typing(text, selector, speed=50){
         }, speed);
     });
 }
-
 

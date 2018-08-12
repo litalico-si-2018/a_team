@@ -70,18 +70,18 @@
 }
 
 .good {
-    background-image: url("./assets/image/good.png");
+    background-image: url("./images/good.png");
     background-size: contain;
 }
 
 
 .normal {
-    background-image: url("./assets/image/normal.png");
+    background-image: url("./images/normal.png");
     background-size: contain;
 }
 
 .angly {
-    background-image: url("./assets/image/angly.png");
+    background-image: url("./images/angly.png");
     background-size: contain;
 }
 .speech_area .text {
