@@ -117,6 +117,18 @@
     cursor: pointer;
 }
 
+@keyframes img-move-up {
+  to {
+    transform: translateY(-600px);
+  }
+}
+
+@keyframes img-move-down {
+    to {
+      transform: translateY(600px);
+    }
+  }
+  
 .fa-heart, .fa-heart:before {
     color: #f55;
     z-index: 1;
@@ -125,26 +137,13 @@
     left: 10px;
 }
 
-@keyframes img-move-up {
-  to {
-    transform: translateY(-1000px);
-  }
-}
-
-@keyframes img-move-down {
-    to {
-      transform: translateY(1000px);
-    }
-  }
-  
 .fa-tint, .fa-tint:before {
     color: #5af;
-    display: none;
     z-index: 1;
     position: absolute;
     animation: img-move-down 6s infinite;
     right: 10px;
-    top: 20px;
+    top: -300px;
 }
 
 .speech_area .text {
