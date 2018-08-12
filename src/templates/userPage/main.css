@@ -30,6 +30,7 @@
     background-color: var(--thema-color);
     color: white;
     font-weight:bold;
+    display: inline-block;
 }
 
 .speech_area {
