@@ -91,7 +91,25 @@ function toggleFadeoutIcons(ans_id){
     for(var i=0,l=items.length;i<l;i++){
         const cl = items[i].classList
         if (i == ans_id){
+
             cl.toggle("rotaionFadeoutAnim");
+
+            console.log(ans_id);
+
+            if (ans_id == 0){
+                $("#answerHeart").addClass("fa fa-heart");
+                $(".fa-heart:before").css("display", "inline-block");
+                $('#answerHeart').delay(2000).queue(function() {
+                    $(this).removeClass('fa-heart').dequeue();
+                });
+            } else if (ans_id == 2) {
+                $("#answerTint").addClass("fa fa-tint");
+                $(".fa-tint:before").css("display", "inline-block");
+                $('#answerTint').delay(2000).queue(function() {
+                  $(this).removeClass('fa-tint').dequeue();
+                }); 
+            }
+
         } else {
             cl.toggle("fadeoutAnim");
         }
