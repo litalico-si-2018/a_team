@@ -24,7 +24,7 @@ class Api{
 
 var now_q_id = 0
 var story_id = 0
-const ans_set = ["good", "normal", "angly"]
+const ans_set = ["good", "normal", "angry"]
 function setup(){
     for (ans of ans_set){
         $(`.${ans}`).on('click', function(e){

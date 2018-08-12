@@ -24,7 +24,7 @@ class Api{
 
 var now_q_id = 0
 var story_id = 0
-const ans_set = ["good", "normal", "angly"]
+const ans_set = ["good", "normal", "angry"]
 function setup(){
     for (ans of ans_set){
         $(`.${ans}`).on('click', function(e){
@@ -44,6 +44,22 @@ function toggleFadeoutIcons(ans_id){
         const cl = items[i].classList
         if (i == ans_id){
             cl.toggle("rotaionFadeoutAnim");
+
+            console.log(ans_id);
+
+            if (ans_id == 0){
+                $("#answerHeart").addClass("fa fa-heart");
+                $(".fa-heart:before").css("display", "inline-block");
+                $('#answerHeart').delay(2000).queue(function() {
+                    $(this).removeClass('fa-heart').dequeue();
+                });
+            } else if (ans_id == 2) {
+                $("#answerTint").addClass("fa fa-tint");
+                $(".fa-tint:before").css("display", "inline-block");
+                $('#answerTint').delay(2000).queue(function() {
+                  $(this).removeClass('fa-tint').dequeue();
+                }); 
+            }
         } else {
             cl.toggle("fadeoutAnim");
         }
