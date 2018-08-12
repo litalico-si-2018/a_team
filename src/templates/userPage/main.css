@@ -1,0 +1,108 @@
+:root {
+    --thema-color: #F9CD16;
+}
+
+
+*{
+    padding:0;
+    margin:0;
+    box-sizing: border-box;
+}
+
+.header {
+    height: 40px;
+    position: relative;
+    
+}
+
+.content {
+    height: 100vh;
+    width: 100vw;
+}
+
+.level {
+    width:70px;
+    height:40px;
+    position: absolute;
+    text-align: center;
+    right:0;
+    padding:6px;
+    background-color: var(--thema-color);
+    color: white;
+    font-weight:bold;
+}
+
+.speech_area {
+    position: relative;
+    margin-top:20px;
+    height: 200px;
+    text-align: center;
+}
+
+.balloon_area {
+    height: 200px;
+}
+
+.speech_area img {
+    height: 200px;
+    max-width: 100%;
+}
+
+.avator_area {
+    height: 270px;
+    text-align: center;
+}
+
+.avator_area .avator {
+    height: 100%;
+}
+
+
+.choice_area {
+    display: flex;
+    height: 100px;
+    margin-top: 20px;
+    justify-content: space-around;
+}
+
+.choice_area .item {
+    width: 100px;
+}
+
+.good {
+    background-image: url("./images/good.png");
+    background-size: contain;
+}
+
+
+.normal {
+    background-image: url("./images/normal.png");
+    background-size: contain;
+}
+
+.angly {
+    background-image: url("./images/angly.png");
+    background-size: contain;
+}
+.speech_area .text {
+    position: absolute;
+    display: inline-block;
+    vertical-align: middle;
+    width: 270px;
+    font-size: 30px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateY(-50%) translateX(-50%);
+    -webkit- transform: translateY(-50%) translateX(-50%);
+}
+
+.text_area {
+    position: absolute;
+    top: 10px;
+    left: 40px;
+    height: 160px;
+    width: 290px;
+}
+
+
