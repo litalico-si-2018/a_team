@@ -137,4 +137,17 @@ function typing(text, selector, speed=50){
     });
 }
 
+$("#avatorNormal").on("click", function(){
+    $("#avatorPleased").remove();
+    $(this).css("display", "block");
 
+    $(this).parent(".avator_area").append('<img class="avator" id="avatorPleased" src="./assets/image/lying.svg" />')
+    // $(this).remove();
+    $(this).css("display", "none");
+
+    $("#avatorPleased").delay(1000).queue(function() {
+        // $(this).append('<img class="avator" id="avatorNormal" src="./assets/image/waiting.svg" />')        
+        $(this).remove();
+        $("#avatorNormal").css("display", "block");
+    }); 
+})
