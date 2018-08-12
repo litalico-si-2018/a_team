@@ -71,8 +71,6 @@
 }
 
 
-/* [IMO] fontawesome が安全な気がしますが、どうでしょうか。 */
-
 .good {
     background-image: url("../image/smile.png"); 
     background-size: contain;
