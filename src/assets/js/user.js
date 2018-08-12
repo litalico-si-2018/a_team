@@ -111,7 +111,6 @@ function toggleFadeoutIcons(ans_id){
                 }); 
             }
 
-
         } else {
             cl.toggle("fadeoutAnim");
         }
