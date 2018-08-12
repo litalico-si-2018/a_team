@@ -11,6 +11,15 @@ APP_ROOT = os.path.dirname(os.path.abspath(__file__))
 def index():
     return render_template("index.html")
 
+@app.route("/worry")
+def worry():
+    return render_template("worry.html")
+
+@app.route("/happy")
+def happy():
+    return render_template("happy.html")
+
+
 @app.route("/admin")
 def admin():
 
