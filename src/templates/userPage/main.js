@@ -123,5 +123,3 @@ function typing(text, selector, speed=50){
         }, speed);
     });
 }
-
-
