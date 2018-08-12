@@ -73,6 +73,14 @@ a {
     height: 100%;
 }
 
+#avatorNormal{
+    cursor: pointer;
+    margin: 0 auto;
+}
+
+#avatorPleased{
+    width: 100%;
+}
 
 .choice_area {
     display: flex;
