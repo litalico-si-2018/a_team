@@ -52,13 +52,8 @@ class Api{
 
 var now_q_id = 0
 var story_id = 0
-<<<<<<< HEAD
 var now_speech = ""
-
 const ans_set = ["good", "normal", "angly"]
-=======
-const ans_set = ["good", "normal", "angry"]
->>>>>>> 507198e8ba1820cd2964259be820d23a112ecf08
 function setup(){
     for (ans of ans_set){
         $(`.${ans}`).on('click', function(e){
